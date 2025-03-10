@@ -60,7 +60,7 @@ function App() {
       <div className="cursor-pointer" id="cursor-pointer" />
       <ToastContainer />
       <ThemeProvider theme={theme}>
-        <BrowserRouter>
+        <BrowserRouter basename="/crypto-project">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/dashboard" element={<Dashboard />} />
