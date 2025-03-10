@@ -4,6 +4,8 @@ import TemporaryDrawer from "./drawer";
 import "./styles.css";
 import Switch from "@mui/material/Switch";
 import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
+
 
 function Header() {
   const [darkMode, setDarkMode] = useState(
@@ -45,18 +47,13 @@ function Header() {
       </h1>
       <div className="links">
         <Switch checked={darkMode} onClick={() => changeMode()} />
-        <a href="/">
-          <p className="link">Home</p>
-        </a>
-        <a href="/compare">
-          <p className="link">Compare</p>
-        </a>
-        <a href="/watchlist">
-          <p className="link">Watchlist</p>
-        </a>
-        <a href="/dashboard">
-          <Button text={"dashboard"} />
-        </a>
+
+        <Link to="/" className="link">Home</Link>
+        <Link to="/compare" className="link">Compare</Link>
+        <Link to="/watchlist" className="link">Watchlist</Link>
+        <Link to="/dashboard"><Button text={"dashboard"} /></Link>
+        
+      
       </div>
       <div className="drawer-component">
         <TemporaryDrawer />
